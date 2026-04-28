@@ -1,0 +1,62 @@
+[
+  {
+    "id": "project-1",
+    "name": "Trading Dashboard",
+    "description": "Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.",
+    "category": "fullstack",
+    "tags": ["JavaScript", "Chart.js", "WebSocket", "Node.js", "REST API"],
+    "liveUrl": "#trading",
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-trading-dashboard.webp"
+  },
+  {
+    "id": "project-2",
+    "name": "Cyberpunk Portfolio",
+    "description": "This very portfolio — a fully static cyberpunk-aesthetic site built with HTML5, CSS3, and vanilla JS. No build step.",
+    "category": "frontend",
+    "tags": ["HTML5", "CSS3", "JavaScript", "GSAP", "Three.js"],
+    "liveUrl": "#hero",
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-portfolio.webp"
+  },
+  {
+    "id": "project-3",
+    "name": "Dev Toolkit CLI",
+    "description": "A command-line utility for scaffolding projects, managing environments, and automating repetitive dev tasks.",
+    "category": "tool",
+    "tags": ["Node.js", "CLI", "Shell", "Inquirer"],
+    "liveUrl": null,
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-cli-tool.webp"
+  },
+  {
+    "id": "project-4",
+    "name": "Market Screener",
+    "description": "Automated stock screener that filters equities by technical criteria and sends daily digest emails.",
+    "category": "fullstack",
+    "tags": ["Python", "FastAPI", "PostgreSQL", "Celery", "React"],
+    "liveUrl": null,
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-screener.webp"
+  },
+  {
+    "id": "project-5",
+    "name": "Component Library",
+    "description": "A reusable glassmorphism UI component library with dark/light theming, built in pure CSS and vanilla JS.",
+    "category": "frontend",
+    "tags": ["CSS3", "JavaScript", "Storybook", "Design Tokens"],
+    "liveUrl": null,
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-components.webp"
+  },
+  {
+    "id": "project-6",
+    "name": "Log Analyzer",
+    "description": "CLI tool that parses server logs, detects anomalies, and generates visual HTML reports with trend charts.",
+    "category": "tool",
+    "tags": ["Node.js", "Regex", "Chart.js", "CLI", "HTML"],
+    "liveUrl": null,
+    "githubUrl": "https://github.com",
+    "imageUrl": "assets/images/project-log-analyzer.webp"
+  }
+]

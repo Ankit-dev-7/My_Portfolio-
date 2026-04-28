@@ -1,0 +1,211 @@
+/* ==========================================================================
+   animations.css — @keyframes, Transition Utilities, Reduced-Motion Support
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. @keyframes Definitions
+   -------------------------------------------------------------------------- */
+
+/* Glow pulse — neon border/shadow breathing effect */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(0, 245, 255, 0.4), 0 0 12px rgba(0, 245, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(0, 245, 255, 0.9), 0 0 32px rgba(0, 245, 255, 0.5), 0 0 60px rgba(0, 245, 255, 0.2);
+  }
+}
+
+/* Fade in — simple opacity reveal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide up — fade + translate from below */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Float — gentle vertical oscillation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+/* Scanline — horizontal scan effect for cyberpunk overlays */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Progress bar fill — used by loader */
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* Spin — loading indicator */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Scale in — zoom reveal */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Neon flicker — occasional glitch effect */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: var(--glow-cyan);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.7;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Animation Utility Classes
+   -------------------------------------------------------------------------- */
+.animate-fadeIn     { animation: fadeIn     600ms ease forwards; }
+.animate-slideUp    { animation: slideUp    600ms ease forwards; }
+.animate-slideLeft  { animation: slideInLeft  600ms ease forwards; }
+.animate-slideRight { animation: slideInRight 600ms ease forwards; }
+.animate-float      { animation: float      3s ease-in-out infinite; }
+.animate-glowPulse  { animation: glowPulse  2s ease-in-out infinite; }
+.animate-blink      { animation: blink      1s step-end infinite; }
+.animate-spin       { animation: spin       1s linear infinite; }
+.animate-scaleIn    { animation: scaleIn    400ms ease forwards; }
+.animate-flicker    { animation: neonFlicker 3s linear infinite; }
+
+/* Delay utilities */
+.delay-100  { animation-delay: 100ms; }
+.delay-200  { animation-delay: 200ms; }
+.delay-300  { animation-delay: 300ms; }
+.delay-500  { animation-delay: 500ms; }
+.delay-700  { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+/* Duration utilities */
+.duration-300  { animation-duration: 300ms; }
+.duration-500  { animation-duration: 500ms; }
+.duration-800  { animation-duration: 800ms; }
+.duration-1200 { animation-duration: 1200ms; }
+
+/* --------------------------------------------------------------------------
+   3. Transition Utilities
+   -------------------------------------------------------------------------- */
+.transition-all    { transition: all var(--transition-base); }
+.transition-colors { transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base); }
+.transition-shadow { transition: box-shadow var(--transition-base); }
+.transition-transform { transition: transform var(--transition-base); }
+.transition-opacity   { transition: opacity var(--transition-base); }
+
+/* --------------------------------------------------------------------------
+   4. Typing cursor
+   -------------------------------------------------------------------------- */
+.typing-cursor {
+  display: inline-block;
+  color: var(--accent-cyan);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Scanline overlay (decorative, applied via pseudo-element)
+   -------------------------------------------------------------------------- */
+.scanline-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 245, 255, 0.015) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   6. Reduced Motion — disable / minimise all animations
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Specifically kill the animations that could cause vestibular issues */
+  .animate-float,
+  .animate-glowPulse,
+  .animate-flicker,
+  .animate-spin {
+    animation: none !important;
+  }
+
+  .typing-cursor {
+    animation: none !important;
+    opacity: 1;
+  }
+
+  /* AOS — prevent transforms */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

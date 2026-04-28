@@ -1,0 +1,44 @@
+[
+  {
+    "date": "Jan 2020",
+    "title": "Started Web Development",
+    "description": "Began learning HTML, CSS, and JavaScript. Built first static websites and fell in love with the craft.",
+    "type": "webdev"
+  },
+  {
+    "date": "Jun 2020",
+    "title": "First Trading Account",
+    "description": "Opened first brokerage account. Started studying technical analysis, price action, and market structure.",
+    "type": "trading"
+  },
+  {
+    "date": "Jan 2021",
+    "title": "First Game Jam",
+    "description": "Participated in a 48-hour game jam using Godot. Shipped a playable prototype and caught the game dev bug.",
+    "type": "gamedev"
+  },
+  {
+    "date": "Sep 2021",
+    "title": "Algorithmic Trading",
+    "description": "Wrote first automated trading strategy in Python. Backtested across 5 years of data with positive expectancy.",
+    "type": "trading"
+  },
+  {
+    "date": "Mar 2022",
+    "title": "Full-Stack Projects",
+    "description": "Expanded into Node.js and databases. Shipped first full-stack web application with real users.",
+    "type": "webdev"
+  },
+  {
+    "date": "Nov 2022",
+    "title": "Indie Game Release",
+    "description": "Released first indie game on itch.io. Received positive feedback and 500+ downloads in the first month.",
+    "type": "gamedev"
+  },
+  {
+    "date": "2024",
+    "title": "Three Worlds Converge",
+    "description": "Trading, web development, and game creation are now deeply intertwined. Building at the intersection of all three.",
+    "type": "milestone"
+  }
+]

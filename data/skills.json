@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    { "id": "frontend",           "label": "Frontend",           "level": 0,  "parent": null,       "category": "frontend", "icon": "🖥️" },
+    { "id": "backend",            "label": "Backend",            "level": 0,  "parent": null,       "category": "backend",  "icon": "⚙️" },
+    { "id": "trading",            "label": "Trading",            "level": 0,  "parent": null,       "category": "trading",  "icon": "📈" },
+    { "id": "gamedev",            "label": "Game Dev",           "level": 0,  "parent": null,       "category": "gamedev",  "icon": "🎮" },
+
+    { "id": "htmlcss",            "label": "HTML/CSS",           "level": 95, "parent": "frontend", "category": "frontend", "icon": "🎨" },
+    { "id": "javascript",         "label": "JavaScript",         "level": 90, "parent": "frontend", "category": "frontend", "icon": "⚡" },
+    { "id": "react",              "label": "React",              "level": 80, "parent": "frontend", "category": "frontend", "icon": "⚛️" },
+    { "id": "threejs",            "label": "Three.js",           "level": 75, "parent": "frontend", "category": "frontend", "icon": "🌐" },
+
+    { "id": "nodejs",             "label": "Node.js",            "level": 82, "parent": "backend",  "category": "backend",  "icon": "🟢" },
+    { "id": "python",             "label": "Python",             "level": 78, "parent": "backend",  "category": "backend",  "icon": "🐍" },
+    { "id": "sql",                "label": "SQL",                "level": 70, "parent": "backend",  "category": "backend",  "icon": "🗄️" },
+
+    { "id": "technical-analysis", "label": "Technical Analysis", "level": 88, "parent": "trading",  "category": "trading",  "icon": "📊" },
+    { "id": "algo-trading",       "label": "Algo Trading",       "level": 75, "parent": "trading",  "category": "trading",  "icon": "🤖" },
+    { "id": "options",            "label": "Options",            "level": 72, "parent": "trading",  "category": "trading",  "icon": "💹" },
+
+    { "id": "godot",              "label": "Godot",              "level": 80, "parent": "gamedev",  "category": "gamedev",  "icon": "🕹️" },
+    { "id": "unity",              "label": "Unity",              "level": 65, "parent": "gamedev",  "category": "gamedev",  "icon": "🎯" },
+    { "id": "phaser",             "label": "Phaser",             "level": 70, "parent": "gamedev",  "category": "gamedev",  "icon": "🚀" }
+  ]
+}

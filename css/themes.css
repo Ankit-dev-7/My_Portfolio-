@@ -1,0 +1,86 @@
+/* ==========================================================================
+   themes.css — Light Theme Overrides via [data-theme="light"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Smooth theme transition on :root
+   -------------------------------------------------------------------------- */
+:root {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+/* --------------------------------------------------------------------------
+   Light theme — override all custom properties
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary:    #f0f4f8;
+  --bg-secondary:  #e2e8f0;
+  --bg-tertiary:   #cbd5e1;
+  --bg-card:       rgba(255, 255, 255, 0.8);
+
+  /* Accents — slightly desaturated for light mode readability */
+  --accent-cyan:    #0099bb;
+  --accent-magenta: #cc00cc;
+  --accent-gold:    #b8860b;
+  --accent-green:   #007744;
+  --accent-red:     #cc1144;
+
+  /* Text */
+  --text-primary:   #1a1a2e;
+  --text-secondary: #2d3748;
+  --text-muted:     #718096;
+  --text-inverse:   #f0f4f8;
+
+  /* Borders */
+  --border-color:       rgba(0, 153, 187, 0.2);
+  --border-color-hover: rgba(0, 153, 187, 0.6);
+
+  /* Glassmorphism */
+  --glass-bg:     rgba(255, 255, 255, 0.65);
+  --glass-blur:   blur(12px);
+  --glass-border: 1px solid rgba(0, 153, 187, 0.2);
+
+  /* Glow shadows — softer in light mode */
+  --glow-cyan:    0 0 6px rgba(0, 153, 187, 0.4), 0 0 14px rgba(0, 153, 187, 0.2);
+  --glow-magenta: 0 0 6px rgba(204, 0, 204, 0.4), 0 0 14px rgba(204, 0, 204, 0.2);
+  --glow-gold:    0 0 6px rgba(184, 134, 11, 0.4), 0 0 14px rgba(184, 134, 11, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Ensure body background and text update with theme
+   -------------------------------------------------------------------------- */
+[data-theme="light"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] p {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] a {
+  color: var(--accent-cyan);
+}
+
+[data-theme="light"] a:hover,
+[data-theme="light"] a:focus-visible {
+  color: var(--accent-magenta);
+}
+
+/* Scrollbar in light mode */
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--accent-cyan);
+}
+
+/* Section heading in light mode */
+[data-theme="light"] .section-heading {
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+}
