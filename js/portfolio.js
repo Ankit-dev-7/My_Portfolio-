@@ -6,7 +6,7 @@
 // â”€â”€ Inline Data (replaces fetch calls) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 var PROJECTS_DATA = [
-  { id:'p1', name:'Trading Dashboard', description:'Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.', category:'fullstack', tags:['JavaScript','Chart.js','WebSocket','Node.js'], liveUrl:'#trading', githubUrl:'#' },
+  { id:'p1', name:'Trading Dashboard', description:'Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.', category:'fullstack', tags:['JavaScript','Chart.js','WebSocket','Node.js'], liveUrl:'https://ankit-7.itch.io/paper-trading', githubUrl:'https://github.com/AnkitA772sudo/Paper_Trading' },
   { id:'p2', name:'Cyberpunk Portfolio', description:'This very portfolio â€” a fully static cyberpunk-aesthetic site built with HTML5, CSS3, and vanilla JS.', category:'frontend', tags:['HTML5','CSS3','JavaScript','GSAP','Three.js'], liveUrl:'#hero', githubUrl:'#' },
   { id:'p3', name:'Dev Toolkit CLI', description:'A command-line utility for scaffolding projects, managing environments, and automating repetitive dev tasks.', category:'tool', tags:['Node.js','CLI','Shell'], liveUrl:null, githubUrl:'#' },
   { id:'p4', name:'Market Screener', description:'Automated stock screener that filters equities by technical criteria and sends daily digest emails.', category:'fullstack', tags:['Python','FastAPI','PostgreSQL','React'], liveUrl:null, githubUrl:'#' },
@@ -355,7 +355,7 @@ function renderProjects(projects) {
   setTimeout(function(){
     grid.innerHTML = projects.map(function(p){
       var tags = p.tags.map(function(t){ return '<span class="tag">'+t+'</span>'; }).join('');
-      var live = p.liveUrl ? '<a href="'+p.liveUrl+'" class="btn-primary btn--sm">Live Demo</a>' : '';
+      var live = p.liveUrl ? '<a href="'+p.liveUrl+'" class="btn-primary btn--sm" target="_blank" rel="noopener noreferrer">Live Demo</a>' : '';
       var gh   = p.githubUrl ? '<a href="'+p.githubUrl+'" class="btn-ghost btn--sm" target="_blank">GitHub</a>' : '';
       return '<article class="project-card glass-card" data-category="'+p.category+'"><div class="project-card-inner"><div class="project-header"><h3 class="project-name">'+p.name+'</h3><span class="project-category-badge">'+p.category+'</span></div><p class="project-desc">'+p.description+'</p><div class="project-tags">'+tags+'</div><div class="project-actions">'+live+gh+'</div></div></article>';
     }).join('');
