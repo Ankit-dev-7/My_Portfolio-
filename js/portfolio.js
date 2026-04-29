@@ -8,10 +8,7 @@
 var PROJECTS_DATA = [
   { id:'p1', name:'Trading Dashboard', description:'Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.', category:'fullstack', tags:['JavaScript','Chart.js','WebSocket','Node.js'], liveUrl:'https://ankit-7.itch.io/paper-trading', githubUrl:'https://github.com/AnkitA772sudo/Paper_Trading' },
   { id:'p2', name:'Cyberpunk Portfolio', description:'This very portfolio â€” a fully static cyberpunk-aesthetic site built with HTML5, CSS3, and vanilla JS.', category:'frontend', tags:['HTML5','CSS3','JavaScript','GSAP','Three.js'], liveUrl:'#hero', githubUrl:'#' },
-  { id:'p3', name:'Dev Toolkit CLI', description:'A command-line utility for scaffolding projects, managing environments, and automating repetitive dev tasks.', category:'tool', tags:['Node.js','CLI','Shell'], liveUrl:null, githubUrl:'#' },
-  { id:'p4', name:'Market Screener', description:'Automated stock screener that filters equities by technical criteria and sends daily digest emails.', category:'fullstack', tags:['Python','FastAPI','PostgreSQL','React'], liveUrl:null, githubUrl:'#' },
-  { id:'p5', name:'Component Library', description:'A reusable glassmorphism UI component library with dark/light theming, built in pure CSS and vanilla JS.', category:'frontend', tags:['CSS3','JavaScript','Design Tokens'], liveUrl:null, githubUrl:'#' },
-  { id:'p6', name:'Log Analyzer', description:'CLI tool that parses server logs, detects anomalies, and generates visual HTML reports with trend charts.', category:'tool', tags:['Node.js','Regex','Chart.js','CLI'], liveUrl:null, githubUrl:'#' }
+  { id:'p4', name:'Component Library', description:'A reusable glassmorphism UI component library with dark/light theming, built in pure CSS and vanilla JS.', category:'frontend', tags:['CSS3','JavaScript','Design Tokens'], liveUrl:null, githubUrl:'#' }
 ];
 
 var GAMES_DATA = [
