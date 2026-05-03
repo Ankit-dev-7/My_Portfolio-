@@ -43,7 +43,7 @@ var SKILLS_DATA = [
   { id:'options',  label:'Options',  level:72, parent:'trading',  category:'trading',  icon:'ðŸ’¹' },
   { id:'godot',    label:'Godot',    level:80, parent:'gamedev',  category:'gamedev',  icon:'ðŸ•¹' },
   { id:'unity',    label:'Unity',    level:65, parent:'gamedev',  category:'gamedev',  icon:'ðŸŽ¯' },
-  { id:'phaser',   label:'Phaser',   level:70, parent:'gamedev',  category:'gamedev',  icon:'ðŸš€' }
+  { id:'gamemaker', label:'GameMaker', level:70, parent:'gamedev',  category:'gamedev',  icon:'🎲' }
 ];
 
 var TIMELINE_DATA = [
