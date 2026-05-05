@@ -8,42 +8,38 @@
 var PROJECTS_DATA = [
   { id:'p1', name:'Trading Dashboard', description:'Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.', category:'fullstack', tags:['JavaScript','Chart.js','WebSocket','Node.js'], liveUrl:'https://ankit-7.itch.io/paper-trading', githubUrl:'https://github.com/AnkitA772sudo/Paper_Trading' },
   { id:'p2', name:'Cyberpunk Portfolio', description:'This very portfolio â€” a fully static cyberpunk-aesthetic site built with HTML5, CSS3, and vanilla JS.', category:'frontend', tags:['HTML5','CSS3','JavaScript','GSAP','Three.js'], liveUrl:'#hero', githubUrl:'#' },
-  { id:'p4', name:'Component Library', description:'A reusable glassmorphism UI component library with dark/light theming, built in pure CSS and vanilla JS.', category:'frontend', tags:['CSS3','JavaScript','Design Tokens'], liveUrl:null, githubUrl:'#' }
+  { id:'p4', name:'TikTok Content Creator Website', description:'A modern personal brand website built for a TikTok content creator, featuring a stylish UI, social media integration, and a responsive design focused on engagement and collaborations.', category:'frontend', tags:['HTML','CSS3','JavaScript'], liveUrl:'#', githubUrl:'#' }
 ];
 
 var GAMES_DATA = [
-  { id:'g1', title:'Neon Drift', description:'A top-down cyberpunk racing game with procedurally generated tracks, neon aesthetics, and synthwave soundtrack.', engine:'Godot 4', playUrl:'#', devlogs:[
+  { id:'g1', title:'Apricity', description:'Guide Kiri through surreal depths toward the light, uncovering unexpected twists and the deeper meaning behind "warmth of the sun in winter" as you explore and progress through this atmospheric journey.', engine:'GameMaker', playUrl:'#', devlogs:[
     { date:'2024-04-15', entry:'Added neon shader effects and particle trails. Performance optimised to 60fps on mid-range hardware.' },
     { date:'2024-03-01', entry:'Initial prototype complete. Core driving mechanics feel solid with responsive steering and drift physics.' }
   ]},
-  { id:'g2', title:'Market Mayhem', description:'A strategy game where you manage a trading firm through market crashes, bull runs, and black swan events.', engine:'Unity', playUrl:null, devlogs:[
+  { id:'g2', title:'Orbit Survivor', description:'A gravity-driven sci-fi survival roguelike where you fight for existence in a collapsing star system. Use planetary slingshots and orbital momentum to dodge meteors, escape black holes, and push your ship ever further through cosmic chaos — mastering physics is your only way to survive the endless void.', engine:'Godot', playUrl:'#', devlogs:[
     { date:'2024-06-20', entry:'First playable build is live internally. The economic simulation loop is surprisingly fun.' },
     { date:'2024-01-10', entry:'Concept phase complete. Designing the core economic simulation loop.' }
-  ]},
-  { id:'g3', title:'Void Protocol', description:'A minimalist puzzle game set in deep space. Hack satellite networks and uncover a conspiracy in corrupted data streams.', engine:'Phaser 3', playUrl:'#', devlogs:[
-    { date:'2024-07-30', entry:'Puzzle set 2 complete â€” 12 new levels with branching solutions. Added a hint system.' },
-    { date:'2024-06-01', entry:'Started Void Protocol as a game jam entry. The core mechanic clicked immediately during prototyping.' }
   ]}
 ];
 
 var SKILLS_DATA = [
-  { id:'frontend', label:'Frontend', level:0, parent:null, category:'frontend', icon:'ðŸ–¥ï¸' },
-  { id:'backend',  label:'Backend',  level:0, parent:null, category:'backend',  icon:'âš™ï¸' },
-  { id:'trading',  label:'Trading',  level:0, parent:null, category:'trading',  icon:'ðŸ“ˆ' },
-  { id:'gamedev',  label:'Game Dev', level:0, parent:null, category:'gamedev',  icon:'ðŸŽ®' },
-  { id:'htmlcss',  label:'HTML/CSS', level:95, parent:'frontend', category:'frontend', icon:'ðŸŽ¨' },
-  { id:'js',       label:'JavaScript', level:90, parent:'frontend', category:'frontend', icon:'âš¡' },
-  { id:'react',    label:'React',    level:80, parent:'frontend', category:'frontend', icon:'âš›' },
-  { id:'threejs',  label:'Three.js', level:75, parent:'frontend', category:'frontend', icon:'ðŸŒ' },
-  { id:'nodejs',   label:'Node.js',  level:82, parent:'backend',  category:'backend',  icon:'ðŸŸ¢' },
-  { id:'python',   label:'Python',   level:78, parent:'backend',  category:'backend',  icon:'ðŸ' },
-  { id:'sql',      label:'SQL',      level:70, parent:'backend',  category:'backend',  icon:'ðŸ—„' },
-  { id:'ta',       label:'Technical Analysis', level:88, parent:'trading', category:'trading', icon:'ðŸ“Š' },
-  { id:'algo',     label:'Algo Trading', level:75, parent:'trading', category:'trading', icon:'ðŸ¤–' },
-  { id:'options',  label:'Options',  level:72, parent:'trading',  category:'trading',  icon:'ðŸ’¹' },
-  { id:'godot',    label:'Godot',    level:80, parent:'gamedev',  category:'gamedev',  icon:'ðŸ•¹' },
-  { id:'unity',    label:'Unity',    level:65, parent:'gamedev',  category:'gamedev',  icon:'ðŸŽ¯' },
-  { id:'gamemaker', label:'GameMaker', level:70, parent:'gamedev',  category:'gamedev',  icon:'🎲' }
+  { id:"frontend", label:"Frontend",       level:0,  parent:null,       category:"frontend", icon:"FE" },
+  { id:"backend",  label:"Backend",        level:0,  parent:null,       category:"backend",  icon:"BE" },
+  { id:"trading",  label:"Trading",        level:0,  parent:null,       category:"trading",  icon:"TR" },
+  { id:"gamedev",  label:"Game Dev",       level:0,  parent:null,       category:"gamedev",  icon:"GD" },
+  { id:"htmlcss",  label:"HTML/CSS",       level:95, parent:"frontend", category:"frontend", icon:"H" },
+  { id:"js",       label:"JavaScript",     level:90, parent:"frontend", category:"frontend", icon:"JS" },
+  { id:"react",    label:"React",          level:80, parent:"frontend", category:"frontend", icon:"R" },
+  { id:"threejs",  label:"Three.js",       level:75, parent:"frontend", category:"frontend", icon:"3D" },
+  { id:"nodejs",   label:"Node.js",        level:82, parent:"backend",  category:"backend",  icon:"N" },
+  { id:"python",   label:"Python",         level:78, parent:"backend",  category:"backend",  icon:"PY" },
+  { id:"sql",      label:"SQL",            level:70, parent:"backend",  category:"backend",  icon:"DB" },
+  { id:"ta",       label:"Tech Analysis",  level:88, parent:"trading",  category:"trading",  icon:"TA" },
+  { id:"algo",     label:"Algo Trading",   level:75, parent:"trading",  category:"trading",  icon:"AT" },
+  { id:"options",  label:"Options",        level:72, parent:"trading",  category:"trading",  icon:"OP" },
+  { id:"godot",    label:"Godot",          level:80, parent:"gamedev",  category:"gamedev",  icon:"GO" },
+  { id:"unity",    label:"Unity",          level:65, parent:"gamedev",  category:"gamedev",  icon:"UN" },
+  { id:"gamemaker",label:"GameMaker",      level:70, parent:"gamedev",  category:"gamedev",  icon:"GM" }
 ];
 
 var TIMELINE_DATA = [
@@ -66,7 +62,7 @@ var MISSIONS_DATA = [
 var STATS_DATA = [
   { value:'68%', label:'Win Rate' },
   { value:'2.4:1', label:'Avg R:R' },
-  { value:'247', label:'Total Trades' },
+  { value:'100', label:'Total Trades' },
   { value:'+18.3%', label:'Best Month' }
 ];
 
@@ -202,7 +198,7 @@ function applyTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
   try { localStorage.setItem('theme', t); } catch(e){}
   var icon = document.querySelector('#theme-toggle .theme-icon');
-  if (icon) icon.textContent = t==='dark' ? 'â—' : 'â˜€';
+  if (icon) icon.textContent = t==='dark' ? 'DARK' : 'LIGHT';
 }
 
 // â”€â”€ Hero â€” Typing Animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
