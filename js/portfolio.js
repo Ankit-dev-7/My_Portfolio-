@@ -30,15 +30,12 @@ var SKILLS_DATA = [
   { id:"htmlcss",  label:"HTML/CSS",       level:95, parent:"frontend", category:"frontend", icon:"H" },
   { id:"js",       label:"JavaScript",     level:90, parent:"frontend", category:"frontend", icon:"JS" },
   { id:"react",    label:"React",          level:80, parent:"frontend", category:"frontend", icon:"R" },
-  { id:"threejs",  label:"Three.js",       level:75, parent:"frontend", category:"frontend", icon:"3D" },
-  { id:"nodejs",   label:"Node.js",        level:82, parent:"backend",  category:"backend",  icon:"N" },
   { id:"python",   label:"Python",         level:78, parent:"backend",  category:"backend",  icon:"PY" },
   { id:"sql",      label:"SQL",            level:70, parent:"backend",  category:"backend",  icon:"DB" },
   { id:"ta",       label:"Tech Analysis",  level:88, parent:"trading",  category:"trading",  icon:"TA" },
   { id:"algo",     label:"Algo Trading",   level:75, parent:"trading",  category:"trading",  icon:"AT" },
   { id:"options",  label:"Options",        level:72, parent:"trading",  category:"trading",  icon:"OP" },
   { id:"godot",    label:"Godot",          level:80, parent:"gamedev",  category:"gamedev",  icon:"GO" },
-  { id:"unity",    label:"Unity",          level:65, parent:"gamedev",  category:"gamedev",  icon:"UN" },
   { id:"gamemaker",label:"GameMaker",      level:70, parent:"gamedev",  category:"gamedev",  icon:"GM" }
 ];
 
