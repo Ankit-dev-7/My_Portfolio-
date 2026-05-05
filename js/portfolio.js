@@ -7,7 +7,7 @@
 
 var PROJECTS_DATA = [
   { id:'p1', name:'Trading Dashboard', description:'Real-time trading analytics with live chart updates, equity curves, and multi-strategy performance tracking.', category:'fullstack', tags:['JavaScript','Chart.js','WebSocket','Node.js'], liveUrl:'https://ankit-7.itch.io/paper-trading', githubUrl:'https://github.com/AnkitA772sudo/Paper_Trading' },
-  { id:'p2', name:'Cyberpunk Portfolio', description:'This very portfolio â€” a fully static cyberpunk-aesthetic site built with HTML5, CSS3, and vanilla JS.', category:'frontend', tags:['HTML5','CSS3','JavaScript','GSAP','Three.js'], liveUrl:'#hero', githubUrl:'#' },
+  { id:'p2', name:'Cyberpunk Portfolio', description:'A futuristic, interactive portfolio that blends stock trading, web development, and game creation into one immersive experience—featuring animated visuals, live charts, project showcases.', category:'frontend', tags:['HTML5','CSS3','JavaScript','GSAP','Three.js'], liveUrl:'#hero', githubUrl:'#' },
   { id:'p4', name:'TikTok Content Creator Website', description:'A modern personal brand website built for a TikTok content creator, featuring a stylish UI, social media integration, and a responsive design focused on engagement and collaborations.', category:'frontend', tags:['HTML','CSS3','JavaScript'], liveUrl:'#', githubUrl:'#' }
 ];
 
