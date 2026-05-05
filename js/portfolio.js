@@ -40,19 +40,18 @@ var SKILLS_DATA = [
 ];
 
 var TIMELINE_DATA = [
-  { date:'Jan 2020', title:'Started Web Development', description:'Began learning HTML, CSS, and JavaScript. Built first static websites and fell in love with the craft.', type:'webdev' },
-  { date:'Jun 2020', title:'First Trading Account', description:'Opened first brokerage account. Started studying technical analysis, price action, and market structure.', type:'trading' },
-  { date:'Jan 2021', title:'First Game Jam', description:'Participated in a 48-hour game jam using Godot. Shipped a playable prototype and caught the game dev bug.', type:'gamedev' },
-  { date:'Sep 2021', title:'Algorithmic Trading', description:'Wrote first automated trading strategy in Python. Backtested across 5 years of data with positive expectancy.', type:'trading' },
-  { date:'Mar 2022', title:'Full-Stack Projects', description:'Expanded into Node.js and databases. Shipped first full-stack web application with real users.', type:'webdev' },
-  { date:'Nov 2022', title:'Indie Game Release', description:'Released first indie game on itch.io. Received positive feedback and 500+ downloads in the first month.', type:'gamedev' },
+  { date:'Feb 2024', title:'First Trading Account', description:'Opened first brokerage account. Started studying technical analysis, price action, and market structure.', type:'trading' },
+ { date:'Sep 2024', title:'Algorithmic Trading', description:'Wrote first automated trading strategy in Python. Backtested across 5 years of data with positive expectancy.', type:'trading'},
+  { date:'Jan 2025', title:'Started Web Development', description:'Begin learning HTML, CSS, and JavaScript. Built first static websites and fell in love with the craft.', type:'webdev' },
+  { date:'Jan 2026', title:'First Game Jam', description:'Participated in a game jam organized by HackClub (Campfire Kathmandu) using Godot,Gamemaker. Shipped a playable prototype and Runner Up of the Event.', type:'gamedev' },
+ { date:'Apr 2026', title:'Indie Game Release', description:'Released  indie game on itch.io such as Apricity , Orbit Survivor. Received positive feedback.', type:'gamedev' },
+  { date:'Mar 2026', title:'Full-Stack Projects', description:'Expanded into Node.js and databases. Shipped first full-stack web application with real users.', type:'webdev' },
   { date:'2024', title:'Three Worlds Converge', description:'Trading, web development, and game creation are now deeply intertwined. Building at the intersection of all three.', type:'milestone' }
 ];
 
 var MISSIONS_DATA = [
   { title:'Building This Portfolio', status:'active', description:'Crafting a cyberpunk-aesthetic portfolio that fuses trading, web dev, and game dev into one experience.', progress:90 },
   { title:'Algo Trading Bot v2', status:'active', description:'Refining a momentum-based trading algorithm with improved risk management and backtesting framework.', progress:65 },
-  { title:'Void Protocol â€” Puzzle Game', status:'active', description:'Developing a minimalist space puzzle game in Phaser 3. Currently building puzzle set 3.', progress:45 },
   { title:'Full-Stack SaaS Dashboard', status:'paused', description:'A real-time analytics dashboard for small trading firms. Paused while focusing on the portfolio.', progress:30 }
 ];
 
