@@ -12,13 +12,13 @@ var PROJECTS_DATA = [
 ];
 
 var GAMES_DATA = [
-  { id:'g1', title:'Apricity', description:'Guide Kiri through surreal depths toward the light, uncovering unexpected twists and the deeper meaning behind "warmth of the sun in winter" as you explore and progress through this atmospheric journey.', engine:'GameMaker', playUrl:'#', devlogs:[
-    { date:'2024-04-15', entry:'Added neon shader effects and particle trails. Performance optimised to 60fps on mid-range hardware.' },
-    { date:'2024-03-01', entry:'Initial prototype complete. Core driving mechanics feel solid with responsive steering and drift physics.' }
+  { id:'g1', title:'Apricity', description:'Guide Kiri through surreal depths toward the light, uncovering unexpected twists and the deeper meaning behind "warmth of the sun in winter" as you explore and progress through this atmospheric journey.', engine:'GameMaker', playUrl:'https://heartlythenewbie.itch.io/apricity', screenshotUrl:'apricity.png', devlogs:[
+    { date:'2026-02-22', entry:'A futuristic, interactive portfolio that blends stock trading, web development, and game creation.', gameTitle:'MY Portfolio' },
+    { date:'2026-01-15', entry:'Developed a winter-themed 2D platformer during HackClub CampfireKathmandu GameJam.' }
   ]},
-  { id:'g2', title:'Orbit Survivor', description:'A gravity-driven sci-fi survival roguelike where you fight for existence in a collapsing star system. Use planetary slingshots and orbital momentum to dodge meteors, escape black holes, and push your ship ever further through cosmic chaos — mastering physics is your only way to survive the endless void.', engine:'Godot', playUrl:'#', devlogs:[
-    { date:'2024-06-20', entry:'First playable build is live internally. The economic simulation loop is surprisingly fun.' },
-    { date:'2024-01-10', entry:'Concept phase complete. Designing the core economic simulation loop.' }
+  { id:'g2', title:'Orbit Survivor', description:'A gravity-driven sci-fi survival roguelike where you fight for existence in a collapsing star system. Use planetary slingshots and orbital momentum to dodge meteors, escape black holes, and push your ship ever further through cosmic chaos — mastering physics is your only way to survive the endless void.', engine:'Godot', playUrl:'https://ankit-7.itch.io/orbit-survivor', screenshotUrl:'Photo1.png', devlogs:[
+    { date:'2026-04-15', entry:'A gravity-driven sci-fi survival roguelike where you fight for existence in a collapsing star system.' },
+    { date:'2025-01-05', entry:'A premium personal portfolio website for a content creator.', gameTitle:'TikTok Content Creator Webpage' }
   ]}
 ];
 
@@ -376,8 +376,9 @@ function initGames() {
   if (grid) {
     grid.innerHTML = GAMES_DATA.map(function(g,i){
       var bg = THUMB_GRADIENTS[i%THUMB_GRADIENTS.length];
-      var play = g.playUrl ? '<a href="'+g.playUrl+'" class="btn-primary game-play-btn">&#9654; Play</a>' : '<span class="btn-secondary game-play-btn" style="opacity:0.5">Coming Soon</span>';
-      return '<article class="game-card glass-card"><div class="game-thumb" style="background:'+bg+'"><div class="game-thumb-icon">&#127918;</div></div><div class="game-body"><h3 class="game-title">'+g.title+'</h3><span class="game-engine">'+g.engine+'</span><p class="game-desc">'+g.description+'</p>'+play+'</div></article>';
+      var play = g.playUrl ? '<a href="'+g.playUrl+'" class="btn-primary game-play-btn" target="_blank" rel="noopener noreferrer">&#9654; Play</a>' : '<span class="btn-secondary game-play-btn" style="opacity:0.5">Coming Soon</span>';
+      var imgHtml = g.screenshotUrl ? '<img src="'+g.screenshotUrl+'" alt="'+g.title+' screenshot" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display=\'none\'" />' : '';
+      return '<article class="game-card glass-card"><div class="game-thumb" style="background:'+bg+'"><div class="game-thumb-icon">&#127918;</div>'+imgHtml+'</div><div class="game-body"><h3 class="game-title">'+g.title+'</h3><span class="game-engine">'+g.engine+'</span><p class="game-desc">'+g.description+'</p>'+play+'</div></article>';
     }).join('');
     grid.querySelectorAll('.game-card').forEach(function(c){
       c.addEventListener('mouseenter', function(){ c.classList.add('game-card--hover'); });
@@ -386,7 +387,7 @@ function initGames() {
   }
   if (devEl) {
     var logs = [];
-    GAMES_DATA.forEach(function(g){ g.devlogs.forEach(function(d){ logs.push(Object.assign({},d,{gameTitle:g.title})); }); });
+    GAMES_DATA.forEach(function(g){ g.devlogs.forEach(function(d){ logs.push(Object.assign({},d,{gameTitle: d.gameTitle || g.title})); }); });
     logs.sort(function(a,b){ return new Date(b.date)-new Date(a.date); });
     devEl.innerHTML = logs.map(function(l){
       var d = new Date(l.date); var fmt = isNaN(d)?l.date:d.toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'});
