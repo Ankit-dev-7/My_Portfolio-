@@ -20,5 +20,15 @@ Three.js
 Chart.js
 AOS
 
+How to Run Locally
+
+No build tools required.
+
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+open index.html
+
+Or use VS Code Live Server.
+
 
 Although most of the part are made by me ...Some of the parts are also made by AI.
